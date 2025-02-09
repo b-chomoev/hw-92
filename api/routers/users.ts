@@ -119,14 +119,4 @@ userRouter.delete('/sessions', auth, async (req, res, next) => {
     }
 });
 
-userRouter.post('/secret', auth, async (req, res, next) => {
-    let expressReq = req as RequestWithUser;
-
-    const user = expressReq.user;
-
-    console.log(user);
-
-    res.send({message: 'Secret material from Attractor', user: user});
-});
-
 export default userRouter;
