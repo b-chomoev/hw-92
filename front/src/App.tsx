@@ -1,6 +1,8 @@
 import { Container, CssBaseline } from '@mui/material';
-import { Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/UI/NavBar/NavBar.tsx';
+import LoginPage from './features/users/LoginPage.tsx';
+import RegisterPage from './features/users/RegisterPage.tsx';
 
 const App = () => {
 
@@ -14,7 +16,8 @@ const App = () => {
       <main>
         <Container maxWidth={'xl'}>
           <Routes>
-
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </Container>
       </main>
